@@ -171,6 +171,13 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
+      portfolioIsotope.arrange({
+        filter: ".filter-game"
+      });
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
