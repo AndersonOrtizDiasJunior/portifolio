@@ -1,17 +1,18 @@
-const name = new URLSearchParams(window.location.search).get('name')
-url = 
+const id = new URLSearchParams(window.location.search).get('id')
+console.log(id)
+const nameText = document.querySelector('#name');
 
-async function fetch(url) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        displayResults(data);
-        displayWindchill()
-      } else {
-          throw Error(await response.text());
-      }
-    } catch (error) {
-        console.log(error);
-    }
+fetch('projects.json')
+  .then(response => response.json())
+  .then(data => {
+    updatePage(data)
+  })
+  .catch(error => {
+    console.error(error); // handle errors
+  });
+
+  function updatePage(data) {
+    const project = data.projects[id]
+    nameText.textContent = project.name
   }
+  
