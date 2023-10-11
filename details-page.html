@@ -91,20 +91,7 @@
 
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Matarazzo.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Matarazzo2.webp" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Matarazzo3.png" alt="">
-                </div>
-
+              <div class="swiper-wrapper align-items-center" id="images">
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -113,26 +100,17 @@
           <div class="col-lg-4">
             <div class="portfolio-description">
               <h2 id="name">Project Name</h2>
-              <p>
+              <p id="description">
                 Project Description
-                <ul>
-                  <li>highlited skills</li>
+                <ul id="skills">
                 </ul>
               </p>
             </div>
             <div class="portfolio-info">
-              <h3>Project Type</h3>
-              <ul>
-                <li><strong>Category</strong>: Category</li>
-                <li><strong>Language</strong>: <span class="iconify countryFlag" data-icon="twemoji:flag-brazil" data-toggle="tooltip" title="Brazilian Portuguease"></span></li>
-                <li><strong>Time on the project/Project Date</strong>: February, 2023 - Present</li>
-                <li><strong>Download on</strong> <a href="ww.neopets.com">Download place</a></li>
-                <li><strong>Souce code and playable prototipes not avaliable due to client copyright protection.</strong></li>
-                <li><strong>Souce code on <a href="https://github.com/AndersonOrtizDiasJunior/RPGPT" target="_blank">GitHub</a></strong></li>
-                <li class="display-3"> <span class="iconify" data-icon="fontisto:unreal-engine" data-toggle="tooltip" title="Made with Unreal Engine 5"></span>
-                  <span class="iconify" data-icon="material-symbols:layers" data-toggle="tooltip" title="Code in Blueprints Visual Scripts"></span>
-                  <span class="iconify" data-icon="gg:c-plus-plus" data-toggle="tooltip" title="Scripts in C++"></span>
-                </li>
+              <h3 id="type">Project Type</h3>
+              <ul id="contentDetail">
+                <li><strong>Category</strong>: <span id="category">Category</span></li>
+                <li><strong id="dateLabel">Time on the project/Project Date</strong>: <span id="dateValue"></span></li>
               </ul>
             </div>
           </div>

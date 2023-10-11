@@ -1093,10 +1093,32 @@ section {
   color: #eaebf0;
 }
 
+.display-3 {
+  display: flex;
+  gap: 5%;
+}
+
+.display-3 div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: min-content;
+}
+
+.display-3 div p {
+  font-size: 15px;
+}
+
 @media (max-width: 1199px) {
   #footer {
     position: static;
     width: auto;
     padding-right: 20px 15px;
+  }
+
+  .display-3 {
+    flex-direction: column;
+    align-items: center;
+    font-size: 4em;
   }
 }
