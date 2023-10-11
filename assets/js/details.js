@@ -10,7 +10,7 @@ const dateLabel = document.querySelector('#dateLabel');
 const dateValue = document.querySelector('#dateValue');
 const images = document.querySelector('#images')
 
-fetch('projectDetails.json')
+fetch('assets/data/projectDetails.json')
   .then(response => response.json())
   .then(data => {
     updatePage(data)
