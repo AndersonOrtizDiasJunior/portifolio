@@ -44,9 +44,9 @@ fetch('assets/data/projectDetails.json')
   })
 images.innerHTML = rawImageHtml
 
-if (project.download !== null) {
+if (project.access !== null) {
   download = document.createElement('li')
-  download.innerHTML = `<strong>Download on <a href="${project.download.url}">${project.download.sourceName}</a></strong>`
+  download.innerHTML = `<strong>${project.access.label} on <a href="${project.access.url}">${project.access.sourceName}</a></strong>`
   detail.appendChild(download)
 }
 
@@ -54,7 +54,7 @@ source = document.createElement('li')
 if (project.sourceCode !== null) {
   source.innerHTML = `<li><strong>Souce code on <a href="${project.sourceCode.url}" target="_blank">${project.sourceCode.hostName}</a></strong></li>`
 } else {
-  source.innerHTML = `  <li><strong>Souce code and playable prototipes not avaliable due to client copyright protection.</strong></li>`
+  source.innerHTML = `  <li><strong>Souce code and playable prototipes not avaliable due to copyright protection.</strong></li>`
 }
 detail.appendChild(source)
 rawIconHtml = ""

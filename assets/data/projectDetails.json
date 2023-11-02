@@ -1,32 +1,69 @@
 {
     "projects": [
       {
-        "name": "Name",
-        "images": ["https://static.paodeacucar.com/img/uploads/1/660/564660.jpg", "https://saojoaquimonline.com.br/wp-content/uploads/2023/10/virada-do-tempo-chuva-frio-geada-centro-oeste-sudeste-sul-final-de-maio-2020-1.jpg", "https://img.irroba.com.br/filters:fill(fff):quality(80)/eterfran/catalog/tijolo/tijolo-baiano-bloco-ceramico/tijolo-baiano-bloco-ceramico-1.jpg"],
-        "description": "description",
-        "skills": ["skill 1", "skill2"],
-        "type": "Test Project",
-        "category": "Test",
+        "name": "Gaming Powerhouse",
+        "images": ["assets/img/portfolio/ph1.png", "assets/img/portfolio/ph2.png", "assets/img/portfolio/ph3.png", "assets/img/portfolio/ph4.png", "assets/img/portfolio/ph5.png"],
+        "description": "The Gaming Powerhouse is an innovation division inside CI&T focused on producing games and gamified experiences for a variety of clients.",
+        "skills": ["Implemented Software Functionalities in Unreal", "Helped Define Coding Patterns and best practices for Blueprints", "Developed simple low poly models on Blender", "Solved Problems with Plugin imports", "Created Cutscenes With Level Sequencer", "Helped imagine and implement gameplay concepts", "Adjusted Level Design and UI"],
+        "type": "Professional Project",
+        "category": "Games and Gamified Experiences",
         "date": {
-          "title": "date title",
-          "value": "date value"
+          "title": "On Project Since",
+          "value": "February, 2023"
         },
-        "download": {
-          "sourceName": "Test",
-          "url": "https://www.neopets.com"
-        },
-        "sourceCode": {
-          "hostName": "Test2",
-          "url": "https://www.neopets.com"
-        },
+        "access": null,
+        "sourceCode": null,
         "logos":[ 
           {
-          "label": "icontest",
+          "label": "Unreal Engine",
           "icon": "fontisto:unreal-engine"
         },
         {
-          "label": "icontest 2",
-          "icon": "fontisto:unreal-engine"
+          "label": "Blueprints",
+          "icon": "material-symbols:layers"
+        },
+        {
+          "label": "Blender",
+          "icon": "simple-icons:blender"
+        },
+        {
+          "label": "Git",
+          "icon": "bi:git"
+        }
+      ]
+      },
+      {
+        "name": "Banana Run Remake",
+        "images": ["assets/img/portfolio/BananaRunRemake2.png", "assets/img/portfolio/BananaRunRemake3.png", "assets/img/portfolio/BananaManRemake4.png", "assets/img/portfolio/BananaManRemake5.png"],
+        "description": "Back when I was 15, I made a game called 'Banana Run' using Delphi. That was my first game ever, and it ocuppies a place in my heart. That's why I decided to remake it from scratch in Unity.\n\nObjectives:",
+        "skills": ["Demonstrate programming skills in C#", "Show knowledge of the Unity game Engine", "Highlight clean code skills", "Prove ability to transform a concept into gameplay"],
+        "type": "Personal Project",
+        "category": "Game",
+        "date": {
+          "title": "Project date",
+          "value": "March, 2022"
+        },
+        "access": {
+          "label": "Play",
+          "sourceName": "Simmer",
+          "url": "https://simmer.io/@AndersonOrtiz/banana-run-remake"
+        },
+        "sourceCode": {
+          "hostName": "GitHub",
+          "url": "https://github.com/AndersonOrtizDiasJunior/BananaRunRemake"
+        },
+        "logos":[ 
+          {
+          "label": "Unity Engine",
+          "icon": "mdi:unity"
+        },
+        {
+          "label": "Code in C#",
+          "icon": "teenyicons:c-sharp-solid"
+        },
+        {
+          "label": "Sprites in Photoshop",
+          "icon": "basil:adobe-photoshop-solid"
         }
       ]
       }
