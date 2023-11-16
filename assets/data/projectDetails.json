@@ -1,6 +1,7 @@
 {
     "projects": [
       {
+        "id": 1,
         "name": "Gaming Powerhouse",
         "images": ["assets/img/portfolio/ph1.png", "assets/img/portfolio/ph2.png", "assets/img/portfolio/ph3.png", "assets/img/portfolio/ph4.png", "assets/img/portfolio/ph5.png"],
         "description": "The Gaming Powerhouse is an innovation division inside CI&T focused on producing games and gamified experiences for a variety of clients.",
@@ -33,6 +34,7 @@
       ]
       },
       {
+        "id": 2,
         "name": "Banana Run Remake",
         "images": ["assets/img/portfolio/BananaRunRemake2.png", "assets/img/portfolio/BananaRunRemake3.png", "assets/img/portfolio/BananaManRemake4.png", "assets/img/portfolio/BananaManRemake5.png"],
         "description": "Back when I was 15, I made a game called 'Banana Run' using Delphi. That was my first game ever, and it ocuppies a place in my heart. That's why I decided to remake it from scratch in Unity.\n\nObjectives:",
