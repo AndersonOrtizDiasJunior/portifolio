@@ -14,24 +14,7 @@
       },
       "access": null,
       "sourceCode": null,
-      "logos":[ 
-        {
-        "label": "Unreal Engine",
-        "icon": "fontisto:unreal-engine"
-      },
-      {
-        "label": "Blueprints",
-        "icon": "material-symbols:layers"
-      },
-      {
-        "label": "Blender",
-        "icon": "simple-icons:blender"
-      },
-      {
-        "label": "Git",
-        "icon": "bi:git"
-      }
-    ]
+      "logosID":"gamingPH"
     },
     {
       "id": 2,
@@ -54,6 +37,86 @@
         "hostName": "GitHub",
         "url": "https://github.com/AndersonOrtizDiasJunior/BananaRunRemake"
       },
+      "logosID":"bananaRun"
+    }
+  ],
+  "technologies": [
+    {
+      "id":"index",
+      "logos":[ 
+        {
+        "label": "Unreal Engine",
+        "icon": "fontisto:unreal-engine"
+      },
+      {
+        "label": "Blueprints Visual Scripting",
+        "icon": "material-symbols:layers"
+      },
+      {
+        "label": "C++",
+        "icon": "gg:c-plus-plus"
+      },
+      {
+        "label": "Blender",
+        "icon": "simple-icons:blender"
+      },
+      {
+        "label": "Unity",
+        "icon": "mdi:unity"
+      },
+      {
+        "label": "C#",
+        "icon": "teenyicons:c-sharp-solid"
+      },
+      {
+        "label": "Git",
+        "icon": "bi:git"
+      },
+      {
+        "label": "Apache Subversion",
+        "icon": "simple-icons:subversion"
+      },
+      {
+        "label": "Agile Frameworks",
+        "icon": "iconoir:agile"
+      },
+      {
+        "label": "iOS Development",
+        "icon": "raphael:ios"
+      },
+      {
+        "label": "tvOS Development",
+        "icon": "simple-icons:appletv"
+      },
+      {
+        "label": "Swift",
+        "icon": "cib:swift"
+      }
+    ]
+    },
+    {
+    "id":"gamingPH",
+    "logos":[ 
+      {
+      "label": "Unreal Engine",
+      "icon": "fontisto:unreal-engine"
+    },
+    {
+      "label": "Blueprints",
+      "icon": "material-symbols:layers"
+    },
+    {
+      "label": "Blender",
+      "icon": "simple-icons:blender"
+    },
+    {
+      "label": "Git",
+      "icon": "bi:git"
+    }
+  ]
+    },
+    {
+      "id":"bananaRun",
       "logos":[ 
         {
         "label": "Unity Engine",
@@ -68,7 +131,7 @@
         "icon": "basil:adobe-photoshop-solid"
       }
     ]
-    }
+    }   
   ]
 }
 
