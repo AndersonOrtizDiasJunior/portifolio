@@ -162,7 +162,8 @@
       "filter":"app",
       "image":"assets/img/portfolio/premiere1.png"
     }
-//   ],
+  ]
+//   ,
 //   "about": {
 //     "headline": "Game designer and iOS developer with a passion for learning and improvement.",
 //     "jobTitle": "Unreal Engine & iOS Developer.",
