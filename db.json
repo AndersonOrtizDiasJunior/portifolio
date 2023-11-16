@@ -162,6 +162,16 @@
       "filter":"app",
       "image":"assets/img/portfolio/premiere1.png"
     }
-  ]
+  ],
+  "about": {
+    "headline": "Game designer and iOS developer with a passion for learning and improvement.",
+    "jobTitle": "Unreal Engine & iOS Developer.",
+    "birth": "19 March 2000",
+    "city": "Piracicaba, Brazil",
+    "phone":"+55 (19) 98927 3702",
+    "email":"anderson_ortiz@hotmail.com.br",
+    "description":"Brazilian junior developer with professional experience, eternaly in love with my family, learning and coding.",
+    "image":"assets/img/profile-img.jpeg"
+  }
 }
 
