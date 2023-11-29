@@ -36,6 +36,25 @@
         "hostName": "GitHub",
         "url": "https://github.com/AndersonOrtizDiasJunior/BananaRunRemake"
       }
+    },
+    {
+      "id": "premiere",
+      "name": "Premiere - The best of Soccer",
+      "images": ["assets/img/portfolio/premiere2.png", "assets/img/portfolio/premiere3.webp"],
+      "description": "Premiere is a Brazilian pay-TV channel that uses the Pay-Per-View format to show the matches of the Campeonato Brasileiro Série A and B, Copa do Brasil and some State Championships for which Globo has the rights to broadcast. The app is developed natively with Swift, using the UIKit and SwiftUI frameworks.",
+      "skills": ["Clean architeture", "PromiseKit", "iOS and AppleTV", "Acessibility", "Scrum"],
+      "type": "Professional Project",
+      "category": "App",
+      "date": {
+        "title": "Time on the project",
+        "value": "May, 2023 - Present"
+      },
+      "access": {
+        "label": "Download",
+        "sourceName": "App Store",
+        "url": "https://apps.apple.com/br/app/premiere/id468481865"
+      },
+      "sourceCode": null
     }
   ],
   "technologies": [
