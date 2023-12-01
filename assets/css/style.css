@@ -1109,6 +1109,10 @@ section {
   font-size: 15px;
 }
 
+.display-3 div svg {
+  align-self: center;
+}
+
 .col-sm div p {
   font-size: 15px;
 }

@@ -10,17 +10,28 @@ const dateLabel = document.querySelector('#dateLabel');
 const dateValue = document.querySelector('#dateValue');
 const images = document.querySelector('#images')
 
-fetch('assets/data/projectDetails.json')
-  .then(response => response.json())
-  .then(data => {
-    updatePage(data)
-  })
-  .catch(error => {
-    console.error(error); // handle errors
-  });
+  async function loadLogos() {
+    const url = "https://my-json-server.typicode.com/AndersonOrtizDiasJunior/portifolio/technologies/"+id
+    const response = await fetch(url);
+    return response.json();
+}
 
-  function updatePage(data) {
-    const project = data.projects[id]
+  async function loadDetails() {
+    const url = "https://my-json-server.typicode.com/AndersonOrtizDiasJunior/portifolio/projects/"+id
+    const response = await fetch(url);
+    return response.json();
+  }
+
+  function loadData() {
+    loadDetails().then((details) => {
+      updateDetails(details)
+      loadLogos().then((logos) => {
+        updateLogos(logos.logos)
+      })
+    })
+  }
+
+  function updateDetails(project) {
     nameText.textContent = project.name
     description.textContent = project.description
 
@@ -54,19 +65,23 @@ source = document.createElement('li')
 if (project.sourceCode !== null) {
   source.innerHTML = `<li><strong>Souce code on <a href="${project.sourceCode.url}" target="_blank">${project.sourceCode.hostName}</a></strong></li>`
 } else {
-  source.innerHTML = `  <li><strong>Souce code and playable prototipes not avaliable due to copyright protection.</strong></li>`
+  source.innerHTML = `  <li><strong>Souce code not avaliable.</strong></li>`
 }
 detail.appendChild(source)
-rawIconHtml = ""
-project.logos.forEach(logo => {
-    rawIconHtml += `<div>
-    <span class="iconify" data-icon="${logo.icon}"></span>
-    <p>${logo.label}</p>
-  </div>`
-})
-icons = document.createElement('li')
-icons.className = 'display-3'
-icons.innerHTML = rawIconHtml
-detail.appendChild(icons)
 }
-  
+ 
+function updateLogos(logos) {
+  rawIconHtml = ""
+  logos.forEach(logo => {
+      rawIconHtml += `<div>
+      <span class="iconify" data-icon="${logo.icon}"></span>
+      <p>${logo.label}</p>
+    </div>`
+  })
+  icons = document.createElement('li')
+  icons.className = 'display-3'
+  icons.innerHTML = rawIconHtml
+  detail.appendChild(icons)
+}
+
+loadData()
