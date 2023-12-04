@@ -1,5 +1,4 @@
 const id = new URLSearchParams(window.location.search).get('id')
-console.log(id)
 const nameText = document.querySelector('#name');
 const skills = document.querySelector('#skills');
 const description = document.querySelector('#description');
@@ -10,24 +9,25 @@ const dateLabel = document.querySelector('#dateLabel');
 const dateValue = document.querySelector('#dateValue');
 const images = document.querySelector('#images')
 
-  async function loadLogos() {
-    const url = "https://my-json-server.typicode.com/AndersonOrtizDiasJunior/portifolio/technologies/"+id
-    const response = await fetch(url);
-    return response.json();
+
+  function loadLogos(data) {
+    const logos = data.technologies.find((logos) => logos.id == id)
+    return logos
 }
 
-  async function loadDetails() {
-    const url = "https://my-json-server.typicode.com/AndersonOrtizDiasJunior/portifolio/projects/"+id
-    const response = await fetch(url);
-    return response.json();
+  function loadDetails(data) {
+    const details = data.projects.find((project) => project.id == id)
+    return details
   }
 
   function loadData() {
-    loadDetails().then((details) => {
+    const response = fetch('assets/data/db.json')
+    .then(response => response.json())
+    .then(data => {
+      details = loadDetails(data)
       updateDetails(details)
-      loadLogos().then((logos) => {
-        updateLogos(logos.logos)
-      })
+      logos = loadLogos(data)
+      updateLogos(logos.logos)
     })
   }
 
