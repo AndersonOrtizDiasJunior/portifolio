@@ -295,10 +295,22 @@
       "image":"assets/img/portfolio/BananaManRemake.png"
     },
     {
-      "id":"premiereApp",
+      "id":"premiere",
       "name":"Premiere",
       "filter":"app",
       "image":"assets/img/portfolio/premiere1.png"
+    },
+    {
+      "id":"g1",
+      "name":"G1",
+      "filter":"app",
+      "image":"assets/img/portfolio/g1.png"
+    },
+    {
+      "id":"rpgpt",
+      "name":"RPGPT",
+      "filter":"app",
+      "image":"assets/img/portfolio/rpgpt1.png"
     }
   ],
   "about": {
