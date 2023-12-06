@@ -1,5 +1,10 @@
 const skills = document.querySelector("#skillsContainer");
 const portfolio = document.querySelector("#projectsConatiner");
+const city = document.querySelector("#location");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
+const whatsapp = document.querySelector("#whatsapp");
+const map = document.querySelector("#map");
 
 function splitArray(arr, x) {
     const subarrays = [];
@@ -58,11 +63,23 @@ function loadPortfolio(data) {
     }
     })
 }
-  
+ 
+function loadContact(data) {
+  contact = data.contact;
+
+  city.textContent = contact.location;
+  email.textContent = contact.email;
+  phone.textContent = contact.call;
+  map.src = contact.map;
+  whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${contact.whatsapp.number}">${contact.whatsapp.label}</a>`;
+}
+
+
 function loadPage() {
     fetchData().then((data) => { 
         loadLogos(data);
         loadPortfolio(data);
+        loadContact(data);
     })
 }
   
