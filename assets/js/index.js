@@ -5,6 +5,8 @@ const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const whatsapp = document.querySelector("#whatsapp");
 const map = document.querySelector("#map");
+const education = document.querySelector("#education");
+const experience = document.querySelector("#experience");
 
 function splitArray(arr, x) {
     const subarrays = [];
@@ -74,12 +76,48 @@ function loadContact(data) {
   whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${contact.whatsapp.number}">${contact.whatsapp.label}</a>`;
 }
 
+function loadResume(data) {
+  educationData = data.resume.education
+  experienceData = data.resume.experience
+
+  educationData.forEach((degree) => {
+    if(degree.visible) {    
+    block = document.createElement('div');
+    block.className = "resume-item";
+    block.innerHTML = `<h4>${degree.name}</h4>
+    <h5>${degree.date}</h5>
+    <p><em>${degree.instituition}</em></p>
+    <p>${degree.description}</p>`;
+    education.appendChild(block)}
+  })
+
+  experienceData.forEach((job) => {
+    if(job.visible) {    
+    block = document.createElement('div');
+    block.className = "resume-item";
+
+    bullets = ""
+    job.bullets.forEach((bullet) => {
+      bullets = bullets.concat(`<li>${bullet}</li>`);
+    })
+    console.log(bullets);
+
+    block.innerHTML = `<h4>${job.name}</h4>
+    <h5>${job.date}</h5>
+    <p><em>${job.instituition}</em></p>
+    <ul>
+      ${bullets}
+    </ul>`;
+    experience.appendChild(block)}
+  })
+}
 
 function loadPage() {
     fetchData().then((data) => { 
         loadLogos(data);
         loadPortfolio(data);
         loadContact(data);
+        loadResume(data);
     })
 }
   

@@ -300,13 +300,24 @@
     "image":"assets/img/profile-img.jpeg"
   },
   "resume": {
-    "education": [{
+    "education": [
+    {
+      "visible":true,
       "name":"BACHELOR'S DEGREE IN SOFTWARE DEVELOPMENT",
       "date":"2021 - June 2024",
       "instituition":"Brigham Young University - Idaho, Boise - ID (Remote)",
       "description":"Bachelor Degree in software development, with strong OOD skills."
-    }],
-    "experience":[{
+    },
+    {
+      "visible":true,
+      "name":"COMPUTER PROGRAMMING TECHNICIAN ",
+      "date":"2015 - 2017",
+      "instituition":"UNICAMP - Colégio Técnico de Limeira (COTIL)",
+      "description":"Technician certificate in computer programming. (C, PAscal, Delphi, Web, MySQL and Java)"}
+  ],
+    "experience":[
+    {
+      "visible":true,
       "name":"UNREAL ENGINE DEVELOPER",
       "date":"2023 - Present",
       "instituition":"CI&T, Brazil (Remote)",
@@ -316,7 +327,20 @@
         "Implemented new 3D game and level design concepts.",
         "Implemented new Level Sequences"
       ]
-    }]
+    },
+    {
+      "visible":true,
+      "name":"iOS DEVELOPER",
+      "date":"2022 - Present",
+      "instituition":"CI&T, Brazil (Remote)",
+      "bullets": [
+        "Developed complex and clean algorithms in Swift.",
+        "Worked as part of a refactor in the project Coodinators to make the application follow MVVM-C standards.",
+        "Implemented Unit Code and UI Tests",
+        "Agile Methodologies"
+      ]
+    }
+  ]
   },
   "contact": {
     "location":"Piracicaba, SP. Brazil",
