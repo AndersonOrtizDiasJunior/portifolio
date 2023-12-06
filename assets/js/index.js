@@ -149,3 +149,4 @@ function loadPage() {
 }
   
 loadPage();
+console.log(window.innerWidth);

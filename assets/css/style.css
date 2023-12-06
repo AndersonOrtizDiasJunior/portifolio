@@ -1065,6 +1065,16 @@ section {
   .breadcrumbs ol li {
     display: inline-block;
   }
+
+  #hero { 
+    background: url("../img/hero-mobile-bg.png") top left;
+  }
+}
+
+@media (max-width: 600px) {
+  #skillsContainer {
+    display: flex;
+   }
 }
 
 /*--------------------------------------------------------------
