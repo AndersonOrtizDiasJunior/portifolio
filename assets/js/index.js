@@ -1,12 +1,23 @@
 const skills = document.querySelector("#skillsContainer");
 const portfolio = document.querySelector("#projectsConatiner");
+
 const city = document.querySelector("#location");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const whatsapp = document.querySelector("#whatsapp");
 const map = document.querySelector("#map");
+
 const education = document.querySelector("#education");
 const experience = document.querySelector("#experience");
+
+const headline = document.querySelector("#headline");
+const jobTitle = document.querySelector("#jobTitle");
+const birthday = document.querySelector("#birthday");
+const aboutCity = document.querySelector("#aboutCity");
+const aboutPhone = document.querySelector("#aboutPhone");
+const aboutEmail = document.querySelector("#aboutEmail");
+const aboutDescription = document.querySelector("#aboutDescription");
+const profile = document.querySelectorAll("#profile");
 
 function splitArray(arr, x) {
     const subarrays = [];
@@ -112,12 +123,28 @@ function loadResume(data) {
   })
 }
 
+function loadAbout(data) {
+  about = data.about;
+
+  profile.forEach((picture) => {
+    picture.src = about.image;
+  }) 
+  headline.textContent = about.headline;
+  birthday.textContent = about.birth;
+  jobTitle.textContent = about.jobTitle;
+  aboutCity.textContent = about.city;
+  aboutPhone.textContent = about.phone;
+  aboutEmail.textContent = about.email;
+  aboutDescription.textContent = about.description;
+}
+
 function loadPage() {
     fetchData().then((data) => { 
+        loadAbout(data)
         loadLogos(data);
+        loadResume(data);
         loadPortfolio(data);
         loadContact(data);
-        loadResume(data);
     })
 }
   
