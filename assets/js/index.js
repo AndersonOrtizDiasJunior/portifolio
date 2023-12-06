@@ -1,5 +1,5 @@
 const skills = document.querySelector("#skillsContainer");
-const projects = document.querySelector("#projectsConatiner");
+const portfolio = document.querySelector("#projectsConatiner");
 
 function splitArray(arr, x) {
     const subarrays = [];
@@ -41,19 +41,21 @@ function loadLogos(data) {
 }
 
 function loadPortfolio(data) {
-    const portfolio = data.portfolio
+    const projects = data.projects
 
-    portfolio.forEach((project) => {
+    projects.forEach((project) => {
+      if (project.portfolio) {        
         var portfolioProject = document.createElement('div');
         portfolioProject.className = `col-lg-4 col-md-6 portfolio-item filter-${project.filter}`;
         portfolioProject.innerHTML = `<div class="portfolio-wrap">
-        <img src="${project.image}" class="img-fluid" alt="">
+        <img src="${project.thumb}" class="img-fluid" alt="">
         <div class="portfolio-links">
           <a href="details-page.html?id=${project.id}" class="align-middle">${project.name}</a>
         </div>
       </div>`;
 
-      projects.appendChild(portfolioProject);
+      portfolio.appendChild(portfolioProject);
+    }
     })
 }
   

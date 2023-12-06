@@ -3,6 +3,10 @@
     {
       "id": "gamingPH",
       "name": "Gaming Powerhouse",
+      "subtitle":null,
+      "filter":"game",
+      "thumb":"assets/img/portfolio/phThumb.png",
+      "portfolio": true,
       "images": ["assets/img/portfolio/ph1.png", "assets/img/portfolio/ph2.png", "assets/img/portfolio/ph3.png", "assets/img/portfolio/ph4.png", "assets/img/portfolio/ph5.png"],
       "description": "The Gaming Powerhouse is an innovation division inside CI&T focused on producing games and gamified experiences for a variety of clients.",
       "skills": ["Implemented Software Functionalities in Unreal", "Helped Define Coding Patterns and best practices for Blueprints", "Developed simple low poly models on Blender", "Solved Problems with Plugin imports", "Created Cutscenes With Level Sequencer", "Helped imagine and implement gameplay concepts", "Adjusted Level Design and UI"],
@@ -18,6 +22,10 @@
     {
       "id": "bananaRun",
       "name": "Banana Run Remake",
+      "subtitle":null,
+      "filter":"game",
+      "thumb":"assets/img/portfolio/BananaManRemake.png",
+      "portfolio": true,
       "images": ["assets/img/portfolio/BananaRunRemake2.png", "assets/img/portfolio/BananaRunRemake3.png", "assets/img/portfolio/BananaManRemake4.png", "assets/img/portfolio/BananaManRemake5.png"],
       "description": "Back when I was 15, I made a game called 'Banana Run' using Delphi. That was my first game ever, and it ocuppies a place in my heart. That's why I decided to remake it from scratch in Unity.\n\nObjectives:",
       "skills": ["Demonstrate programming skills in C#", "Show knowledge of the Unity game Engine", "Highlight clean code skills", "Prove ability to transform a concept into gameplay"],
@@ -39,7 +47,11 @@
     },
     {
       "id": "premiere",
-      "name": "Premiere - The best of Soccer",
+      "name": "Premiere",
+      "subtitle":"The best of Soccer",
+      "filter":"app",
+      "thumb":"assets/img/portfolio/premiere1.png",
+      "portfolio": true,
       "images": ["assets/img/portfolio/premiere2.png", "assets/img/portfolio/premiere3.webp"],
       "description": "Premiere is a Brazilian pay-TV channel that uses the Pay-Per-View format to show the matches of the Campeonato Brasileiro Série A and B, Copa do Brasil and some State Championships for which Globo has the rights to broadcast. The app is developed natively with Swift, using the UIKit and SwiftUI frameworks.",
       "skills": ["Clean architeture", "PromiseKit", "iOS and AppleTV", "Acessibility", "Scrum"],
@@ -58,7 +70,11 @@
     },
     {
       "id": "g1",
-      "name": "G1 - The Globo news portal",
+      "name": "G1",
+      "subtitle":"The Globo news portal",
+      "filter":"app",
+      "thumb":"assets/img/portfolio/g1.png",
+      "portfolio": true,
       "images": ["assets/img/portfolio/g1-2.png", "assets/img/portfolio/g1-3.PNG"],
       "description": "G1 is the top #1 news app in Brazil (being both the most used and the most known). The app is developed natively with Swift, using both the UIKit and SwiftUI frameworks.",
       "skills": ["Auxiliated in the most crucial moment of the app, the Brazilian Presidential Elections",
@@ -85,6 +101,10 @@
       "id": "rpgpt",
       "name": "RPGPT",
       "images": ["assets/img/portfolio/rpgpt2.png", "assets/img/portfolio/rpgpt3.png", "assets/img/portfolio/rpgpt4.png"],
+      "subtitle":null,
+      "filter":"app",
+      "thumb":"assets/img/portfolio/rpgpt1.png",
+      "portfolio": true,
       "description": "This project is a chat app where you can play tabletop RPG with ChatGPT.\n\nProject objectives:",
       "skills": [
         "Demonstrate applied understanding of MVVM architecture",
@@ -269,50 +289,6 @@
     ]
     }   
   ],
-  "portfolio": [
-    {
-      "id":"gamingPH",
-      "name":"Gaming Powerhouse",
-      "filter":"game",
-      "image":"assets/img/portfolio/phThumb.png"
-    },
-    {
-      "id":"shadowDeception",
-      "name":"Shadows of Deception",
-      "filter":"game",
-      "image":"assets/img/portfolio/BananaManRemake.png"
-    },
-    {
-      "id":"futureCorp",
-      "name":"FutureCorp Inc.",
-      "filter":"game",
-      "image":"assets/img/portfolio/BananaManRemake.png"
-    },
-    {
-      "id":"bananaRun",
-      "name":"Banana Run Remake",
-      "filter":"game",
-      "image":"assets/img/portfolio/BananaManRemake.png"
-    },
-    {
-      "id":"premiere",
-      "name":"Premiere",
-      "filter":"app",
-      "image":"assets/img/portfolio/premiere1.png"
-    },
-    {
-      "id":"g1",
-      "name":"G1",
-      "filter":"app",
-      "image":"assets/img/portfolio/g1.png"
-    },
-    {
-      "id":"rpgpt",
-      "name":"RPGPT",
-      "filter":"app",
-      "image":"assets/img/portfolio/rpgpt1.png"
-    }
-  ],
   "about": {
     "headline": "Game designer and iOS developer with a passion for learning and improvement.",
     "jobTitle": "Unreal Engine & iOS Developer.",
@@ -348,7 +324,8 @@
     "Call": "+55 (19) 98927 3702",
     "Whatsapp": {
     "label": "+55 (19) 98927 3702",
-    "link": "https: api.whatsapp.com/send?phone=%2B5519989273702"
+    "link": "https: api.whatsapp.com/send?phone=%2B5519989273702",
+    "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235543.52579375086!2d-47.761918126014756!3d-22.714574651250917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c631c14f4c9d3b:0x270ec30013dc341c!2sPiracicaba,%20SP!5e0!3m2!1spt-BR!2sbr!4v1681862257237!5m2!1spt-BR!2sbr"
   }
   }
 }
