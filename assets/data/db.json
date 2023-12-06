@@ -20,6 +20,29 @@
       "sourceCode": null
     },
     {
+      "id": "shadowDeception",
+      "name": "Shadows of Deception",
+      "subtitle":null,
+      "filter":"game",
+      "thumb":"assets/img/portfolio/sod0.png",
+      "portfolio": true,
+      "images": ["assets/img/portfolio/sod1.png", "assets/img/portfolio/sod2.png", "assets/img/portfolio/sod3.png"],
+      "description": "Shadows of Deception is a small uncompleted game made with Unreal Engine 5.2 for a game Jam. The game is a 3d adventure (of the subgenre walking simulator).",
+      "skills": ["Strong abilities with Unreal Engine 5", "Implement mechanics using Blueprints" ,"Turn concepts into gemaplay"],
+      "type": "Personal Project",
+      "category": "Video Game",
+      "date": {
+        "title": "On Project Since",
+        "value": "October, 2023"
+      },
+      "access": {
+        "label": "Download and play",
+        "sourceName": "Itch.io",
+        "url": "https://d0ip.itch.io/shadowsofdeception"
+      },
+      "sourceCode": null
+    },
+    {
       "id": "bananaRun",
       "name": "Banana Run Remake",
       "subtitle":null,
@@ -200,6 +223,19 @@
     {
       "label": "Git",
       "icon": "bi:git"
+    }
+  ]
+    },
+    {
+    "id":"shadowDeception",
+    "logos":[ 
+      {
+      "label": "Unreal Engine",
+      "icon": "fontisto:unreal-engine"
+    },
+    {
+      "label": "Blueprints",
+      "icon": "material-symbols:layers"
     }
   ]
     },
