@@ -1,5 +1,6 @@
 const id = new URLSearchParams(window.location.search).get('id')
 const nameText = document.querySelector('#name');
+const subtitleText = document.querySelector('#subtitle');
 const skills = document.querySelector('#skills');
 const description = document.querySelector('#description');
 const type = document.querySelector('#type');
@@ -32,8 +33,9 @@ const images = document.querySelector('#images')
   }
 
   function updateDetails(project) {
-    nameText.textContent = project.name
-    description.textContent = project.description
+    nameText.textContent = project.name;
+    subtitleText.textContent = project.subtitle;
+    description.textContent = project.description;
 
     project.skills.forEach(skill => {
         const li = document.createElement('li');
