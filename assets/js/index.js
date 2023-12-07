@@ -1,5 +1,11 @@
 const skills = document.querySelector("#skillsContainer");
 const projectsPortfolio = document.querySelector("#projectsContainer");
+const containerPortfolio = document.querySelector("#portfolio");
+var games = null;
+var mobile = null;
+const gamesBtn = document.querySelector('#gameFilter');
+const mobileBtn = document.querySelector('#appFilter');
+const allBtn = document.querySelector('#allFilter');
 
 const city = document.querySelector("#location");
 const email = document.querySelector("#email");
@@ -36,6 +42,47 @@ async function fetchData() {
     return await response.json();
 }
 
+function filter(filter) {
+  switch(filter) {
+    case 'game':
+      console.log(games);
+      if (projectsPortfolio.contains(mobile)) {
+        projectsPortfolio.removeChild(mobile);
+      }
+      allBtn.className = "";
+      mobileBtn.className = "";
+      gamesBtn.className = "filter-active";
+      projectsPortfolio.appendChild(games);
+      break;
+    case 'app':
+      if (projectsPortfolio.contains(games)) {
+        projectsPortfolio.removeChild(games);
+      }
+      allBtn.className = "";
+      gamesBtn.className = "";
+      mobileBtn.className = "filter-active";
+      projectsPortfolio.appendChild(mobile);
+        break;
+    case 'all':
+      if (projectsPortfolio.contains(mobile)) {
+        projectsPortfolio.removeChild(mobile);
+      }
+      if (projectsPortfolio.contains(games)) {
+        projectsPortfolio.removeChild(games);
+      }
+      mobileBtn.className = "";
+      gamesBtn.className = "";
+      allBtn.className = "filter-active";
+      projectsPortfolio.appendChild(games);
+      projectsPortfolio.appendChild(mobile);
+        break;
+    default:
+      break;
+  }
+
+  portfolio.style.height = "100%";
+}
+
 function loadLogos(data) {
         const logos = data.technologies.find((logosFile) => logosFile.id == "index").logos;
         const logoRows = splitArray(logos, Math.ceil(logos.length / 6));
@@ -60,15 +107,20 @@ function loadLogos(data) {
 
 function loadPortfolio(data) {
     const projects = data.projects
-    const portfolio = document.createElement('div');
-    portfolio.setAttribute("class", "row portfolio-container");
-    portfolio.setAttribute("data-aos", "fade-up");
-    portfolio.setAttribute("data-aos-delay", "100");
+    games = document.createElement('div');
+    games.setAttribute("class", "row portfolio-container");
+    games.setAttribute("data-aos", "fade-up");
+    games.setAttribute("data-aos-delay", "100");
+
+    mobile = document.createElement('div');
+    mobile.setAttribute("class", "row portfolio-container");
+    mobile.setAttribute("data-aos", "fade-up");
+    mobile.setAttribute("data-aos-delay", "100");
 
     projects.forEach((project) => {
       if (project.portfolio) {        
         var portfolioProject = document.createElement('div');
-        portfolioProject.className = `col-lg-4 col-md-6 portfolio-item filter-${project.filter}`;
+        portfolioProject.className = `col-lg-4 col-md-6 portfolio-item`;
         portfolioProject.innerHTML = `<div class="portfolio-wrap">
         <img src="${project.thumb}" class="img-fluid" alt="">
         <div class="portfolio-links">
@@ -76,11 +128,19 @@ function loadPortfolio(data) {
         </div>
       </div>`;
 
-      portfolio.appendChild(portfolioProject);
+      switch(project.filter) {
+        case 'game':
+          games.appendChild(portfolioProject);
+          break;
+        case 'app':
+          mobile.appendChild(portfolioProject);
+            break;
+        default:
+          break;
+      }
     }
     })
-
-    projectsPortfolio.appendChild(portfolio);
+    filter("game");
 }
  
 function loadContact(data) {

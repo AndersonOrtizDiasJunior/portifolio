@@ -594,8 +594,11 @@ section {
   display: flex;
   justify-content: center;
   align-items: center; 
-  height: 100%;
   background: rgba(20, 157, 221, 0.75);
+}
+
+.portfolio-wrap .portfolio-links {
+  height: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
