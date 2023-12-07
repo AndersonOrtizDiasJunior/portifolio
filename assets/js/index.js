@@ -1,11 +1,11 @@
 const skills = document.querySelector("#skillsContainer");
-const portfolio = document.querySelector("#projectsConatiner");
+const projectsPortfolio = document.querySelector("#projectsContainer");
 
 const city = document.querySelector("#location");
 const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const whatsapp = document.querySelector("#whatsapp");
-const map = document.querySelector("#map");
+
 
 const education = document.querySelector("#education");
 const experience = document.querySelector("#experience");
@@ -60,6 +60,10 @@ function loadLogos(data) {
 
 function loadPortfolio(data) {
     const projects = data.projects
+    const portfolio = document.createElement('div');
+    portfolio.setAttribute("class", "row portfolio-container");
+    portfolio.setAttribute("data-aos", "fade-up");
+    portfolio.setAttribute("data-aos-delay", "100");
 
     projects.forEach((project) => {
       if (project.portfolio) {        
@@ -75,6 +79,8 @@ function loadPortfolio(data) {
       portfolio.appendChild(portfolioProject);
     }
     })
+
+    projectsPortfolio.appendChild(portfolio);
 }
  
 function loadContact(data) {
@@ -83,7 +89,6 @@ function loadContact(data) {
   city.textContent = contact.location;
   email.textContent = contact.email;
   phone.textContent = contact.call;
-  map.src = contact.map;
   whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${contact.whatsapp.number}">${contact.whatsapp.label}</a>`;
 }
 
@@ -130,7 +135,7 @@ function loadAbout(data) {
     picture.src = about.image;
   }) 
   headline.textContent = about.headline;
-  birthday.textContent = about.birth;
+  birthday.textContent = `${new Date().getFullYear() - 2000}`;
   jobTitle.textContent = about.jobTitle;
   aboutCity.textContent = about.city;
   aboutPhone.textContent = about.phone;
