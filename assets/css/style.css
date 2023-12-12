@@ -601,11 +601,11 @@ section {
 }
 
 .visited .portfolio-links{
-  background:  rgba(125, 88, 227, 0.75);
+  background:  rgba(20, 157, 221, 0.75);
 }
 
 .unVisited .portfolio-links{
-  background: rgba(20, 157, 221, 0.75);
+  background: rgba(0, 72, 114, 0.75);
 }
 
 .visited img {
