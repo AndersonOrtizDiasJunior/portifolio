@@ -332,8 +332,12 @@
     "phone":"+55 (19) 98927 3702",
     "email":"anderson@ortizdeveloper.com.br",
     "description":"Brazilian junior developer with professional experience, eternaly in love with my family, learning and coding.",
-    "image":"assets/img/profile-img.jpeg"
-  },
+    "image":"assets/img/profile-img.jpeg",
+    "whatsapp": {
+      "label": "+55 (19) 98927 3702",
+      "number":"5519989273702"
+    }
+    },
   "resume": {
     "education": [
     {
@@ -342,6 +346,13 @@
       "date":"2021 - June 2024",
       "instituition":"Brigham Young University - Idaho, Boise - ID (Remote)",
       "description":"Bachelor Degree in software development, with strong OOD skills."
+    },
+    {
+      "visible":true,
+      "name":"CERTIFICATE IN COMPUTER PROGRAMMING",
+      "date":"2021 - 2022",
+      "instituition":"Brigham Young University - Idaho, Boise - ID (Remote)",
+      "description":"Certificate with focus on web and desktop development."
     },
     {
       "visible":true,
@@ -376,15 +387,6 @@
       ]
     }
   ]
-  },
-  "contact": {
-    "location":"Piracicaba, SP. Brazil",
-    "email": "anderson@ortizdeveloper.com.br",
-    "call": "+55 (19) 98927 3702",
-    "whatsapp": {
-    "label": "+55 (19) 98927 3702",
-    "number":"5519989273702"
-  }
   }
 }
 

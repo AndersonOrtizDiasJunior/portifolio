@@ -123,7 +123,7 @@ function loadPortfolio(data) {
         portfolioProject.className = `col-lg-4 col-md-6 portfolio-item`;
         portfolioProject.innerHTML = `<div class="portfolio-wrap">
         <img src="${project.thumb}" class="img-fluid" alt="">
-        <div class="portfolio-links">
+        <div class="portfolio-links unVisited">
           <a href="details-page.html?id=${project.id}" class="align-middle">${project.name}</a>
         </div>
       </div>`;
@@ -141,15 +141,6 @@ function loadPortfolio(data) {
     }
     })
     filter("game");
-}
- 
-function loadContact(data) {
-  contact = data.contact;
-
-  city.textContent = contact.location;
-  email.textContent = contact.email;
-  phone.textContent = contact.call;
-  whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${contact.whatsapp.number}">${contact.whatsapp.label}</a>`;
 }
 
 function loadResume(data) {
@@ -188,7 +179,7 @@ function loadResume(data) {
   })
 }
 
-function loadAbout(data) {
+function loadPersonalInfo(data) {
   about = data.about;
 
   profile.forEach((picture) => {
@@ -201,15 +192,19 @@ function loadAbout(data) {
   aboutPhone.textContent = about.phone;
   aboutEmail.textContent = about.email;
   aboutDescription.textContent = about.description;
+
+  city.textContent = about.city;
+  email.textContent = about.email;
+  phone.textContent = about.phone;
+  whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${about.whatsapp.number}">${about.whatsapp.label}</a>`;
 }
 
 function loadPage() {
     fetchData().then((data) => { 
-        loadAbout(data)
+        loadPersonalInfo(data)
         loadLogos(data);
         loadResume(data);
         loadPortfolio(data);
-        loadContact(data);
     })
 }
   
