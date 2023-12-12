@@ -20,6 +20,25 @@
       "sourceCode": null
     },
     {
+      "id": "flow",
+      "name": "CI&T Flow Assistant",
+      "subtitle":null,
+      "filter":"game",
+      "thumb":"assets/img/portfolio/flowThumb.png",
+      "portfolio": true,
+      "images": ["assets/img/portfolio/flow1.png","assets/img/portfolio/flow2.png","assets/img/portfolio/flow3.jpeg"],
+      "description": "This proof of concept (PoC) was created to demonstrate the potential of CI&T's generative AI solution, Flow. It involves integrating a Metahuman NPC with generative AI to create an NPC that can engage in conversation using voice recognition. The PoC was showcased at an event on December 1st, 2023.",
+      "skills": ["Implemented and configured Enhanced Inputs","Auxiliated on the API integration process", "Create a component to handle the audio recording","Created Scenes, Widgets and UI"],
+      "type": "Professional Project",
+      "category": "Games and Gamified Experiences",
+      "date": {
+        "title": "Project Date",
+        "value": "October - November, 2023"
+      },
+      "access": null,
+      "sourceCode": null
+    },
+    {
       "id": "shadowDeception",
       "name": "Shadows of Deception",
       "subtitle":null,
@@ -290,12 +309,12 @@
       "id":"rpgpt",
       "logos":[ 
         {
-          "label": "Unreal Engine",
-          "icon": "fontisto:unreal-engine"
+          "label": "iOS Development",
+          "icon": "raphael:ios"
         },
         {
-          "label": "Blueprints",
-          "icon": "material-symbols:layers"
+          "label": "Code in Swift",
+          "icon": "cib:swift"
         },
         {
           "label": "Generative AI",
@@ -304,6 +323,27 @@
         {
           "label": "Git",
           "icon": "bi:git"
+        }
+    ]
+    },
+    {
+      "id":"flow",
+      "logos":[ 
+        {
+          "label": "Unreal Engine",
+          "icon": "fontisto:unreal-engine"
+        },
+        {
+          "label": "Scripts in C++",
+          "icon": "gg:c-plus-plus"
+        },
+        {
+          "label": "Blueprints",
+          "icon": "material-symbols:layers"
+        },
+        {
+          "label": "Generative AI",
+          "icon": "eos-icons:ai"
         }
     ]
     },
