@@ -1,3 +1,5 @@
+import {getLocalStorage, setLocalStorage} from "./utils.js";
+
 const id = new URLSearchParams(window.location.search).get('id')
 const nameText = document.querySelector('#name');
 const subtitleText = document.querySelector('#subtitle');
@@ -25,13 +27,22 @@ const images = document.querySelector('#images')
     const response = fetch('assets/data/db.json')
     .then(response => response.json())
     .then(data => {
-      details = loadDetails(data)
+      const details = loadDetails(data)
+      setVisitedProject(details.id)
       updateDetails(details)
-      logos = loadLogos(data)
+      const logos = loadLogos(data)
       updateLogos(logos.logos)
     })
   }
 
+  function setVisitedProject(id) {
+    var visitedItems = getLocalStorage("visitedItems");
+    if (visitedItems == null) {
+      visitedItems = [];
+    }
+    visitedItems.push(id);
+    setLocalStorage("visitedItems", visitedItems);
+  }
   function updateDetails(project) {
     nameText.textContent = project.name;
     subtitleText.textContent = project.subtitle;
@@ -48,7 +59,7 @@ const images = document.querySelector('#images')
     dateLabel.textContent = project.date.title
     dateValue.textContent = project.date.value
 
-  rawImageHtml = ""
+  var rawImageHtml = ""
   project.images.forEach(image => {
     rawImageHtml+= `<div class="swiper-slide">
     <img src="${image}" alt="">
@@ -58,12 +69,12 @@ const images = document.querySelector('#images')
 images.innerHTML = rawImageHtml
 
 if (project.access !== null) {
-  download = document.createElement('li')
+  const download = document.createElement('li')
   download.innerHTML = `<strong>${project.access.label} on <a href="${project.access.url}">${project.access.sourceName}</a></strong>`
   detail.appendChild(download)
 }
 
-source = document.createElement('li')
+const source = document.createElement('li')
 if (project.sourceCode !== null) {
   source.innerHTML = `<li><strong>Souce code on <a href="${project.sourceCode.url}" target="_blank">${project.sourceCode.hostName}</a></strong></li>`
 } else {
@@ -73,14 +84,14 @@ detail.appendChild(source)
 }
  
 function updateLogos(logos) {
-  rawIconHtml = ""
+  var rawIconHtml = ""
   logos.forEach(logo => {
       rawIconHtml += `<div>
       <span class="iconify" data-icon="${logo.icon}"></span>
       <p>${logo.label}</p>
     </div>`
   })
-  icons = document.createElement('li')
+  const icons = document.createElement('li')
   icons.className = 'display-3'
   icons.innerHTML = rawIconHtml
   detail.appendChild(icons)

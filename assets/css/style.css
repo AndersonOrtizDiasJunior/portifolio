@@ -594,11 +594,22 @@ section {
   display: flex;
   justify-content: center;
   align-items: center; 
-  background: rgba(20, 157, 221, 0.75);
 }
 
 .portfolio-wrap .portfolio-links {
   height: 100%;
+}
+
+.visited .portfolio-links{
+  background:  rgba(125, 88, 227, 0.75);
+}
+
+.unVisited .portfolio-links{
+  background: rgba(20, 157, 221, 0.75);
+}
+
+.visited img {
+  opacity: .7;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {

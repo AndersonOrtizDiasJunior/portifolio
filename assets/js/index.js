@@ -1,11 +1,5 @@
+import {loadPortfolio} from "./portfolio.js";
 const skills = document.querySelector("#skillsContainer");
-const projectsPortfolio = document.querySelector("#projectsContainer");
-const containerPortfolio = document.querySelector("#portfolio");
-var games = null;
-var mobile = null;
-const gamesBtn = document.querySelector('#gameFilter');
-const mobileBtn = document.querySelector('#appFilter');
-const allBtn = document.querySelector('#allFilter');
 
 const city = document.querySelector("#location");
 const email = document.querySelector("#email");
@@ -42,57 +36,16 @@ async function fetchData() {
     return await response.json();
 }
 
-function filter(filter) {
-  switch(filter) {
-    case 'game':
-      console.log(games);
-      if (projectsPortfolio.contains(mobile)) {
-        projectsPortfolio.removeChild(mobile);
-      }
-      allBtn.className = "";
-      mobileBtn.className = "";
-      gamesBtn.className = "filter-active";
-      projectsPortfolio.appendChild(games);
-      break;
-    case 'app':
-      if (projectsPortfolio.contains(games)) {
-        projectsPortfolio.removeChild(games);
-      }
-      allBtn.className = "";
-      gamesBtn.className = "";
-      mobileBtn.className = "filter-active";
-      projectsPortfolio.appendChild(mobile);
-        break;
-    case 'all':
-      if (projectsPortfolio.contains(mobile)) {
-        projectsPortfolio.removeChild(mobile);
-      }
-      if (projectsPortfolio.contains(games)) {
-        projectsPortfolio.removeChild(games);
-      }
-      mobileBtn.className = "";
-      gamesBtn.className = "";
-      allBtn.className = "filter-active";
-      projectsPortfolio.appendChild(games);
-      projectsPortfolio.appendChild(mobile);
-        break;
-    default:
-      break;
-  }
-
-  portfolio.style.height = "100%";
-}
-
 function loadLogos(data) {
         const logos = data.technologies.find((logosFile) => logosFile.id == "index").logos;
         const logoRows = splitArray(logos, Math.ceil(logos.length / 6));
 
         logoRows.forEach((logoRow) => {
-            row = document.createElement("div");
+            const row = document.createElement("div");
             row.className = "row";
 
             logoRow.forEach((logo) => {
-                column = document.createElement("div");
+                const column = document.createElement("div");
                 column.className = "col-sm";
                 column.innerHTML = `<div>
                 <span class="iconify" data-icon="${logo.icon}"></span>
@@ -105,51 +58,13 @@ function loadLogos(data) {
         })
 }
 
-function loadPortfolio(data) {
-    const projects = data.projects
-    games = document.createElement('div');
-    games.setAttribute("class", "row portfolio-container");
-    games.setAttribute("data-aos", "fade-up");
-    games.setAttribute("data-aos-delay", "100");
-
-    mobile = document.createElement('div');
-    mobile.setAttribute("class", "row portfolio-container");
-    mobile.setAttribute("data-aos", "fade-up");
-    mobile.setAttribute("data-aos-delay", "100");
-
-    projects.forEach((project) => {
-      if (project.portfolio) {        
-        var portfolioProject = document.createElement('div');
-        portfolioProject.className = `col-lg-4 col-md-6 portfolio-item`;
-        portfolioProject.innerHTML = `<div class="portfolio-wrap">
-        <img src="${project.thumb}" class="img-fluid" alt="">
-        <div class="portfolio-links unVisited">
-          <a href="details-page.html?id=${project.id}" class="align-middle">${project.name}</a>
-        </div>
-      </div>`;
-
-      switch(project.filter) {
-        case 'game':
-          games.appendChild(portfolioProject);
-          break;
-        case 'app':
-          mobile.appendChild(portfolioProject);
-            break;
-        default:
-          break;
-      }
-    }
-    })
-    filter("game");
-}
-
 function loadResume(data) {
-  educationData = data.resume.education
-  experienceData = data.resume.experience
+  const educationData = data.resume.education
+  const experienceData = data.resume.experience
 
   educationData.forEach((degree) => {
     if(degree.visible) {    
-    block = document.createElement('div');
+    const block = document.createElement('div');
     block.className = "resume-item";
     block.innerHTML = `<h4>${degree.name}</h4>
     <h5>${degree.date}</h5>
@@ -160,10 +75,10 @@ function loadResume(data) {
 
   experienceData.forEach((job) => {
     if(job.visible) {    
-    block = document.createElement('div');
+    const block = document.createElement('div');
     block.className = "resume-item";
 
-    bullets = ""
+    var bullets = ""
     job.bullets.forEach((bullet) => {
       bullets = bullets.concat(`<li>${bullet}</li>`);
     })
@@ -180,7 +95,7 @@ function loadResume(data) {
 }
 
 function loadPersonalInfo(data) {
-  about = data.about;
+  const about = data.about;
 
   profile.forEach((picture) => {
     picture.src = about.image;
@@ -204,7 +119,7 @@ function loadPage() {
         loadPersonalInfo(data)
         loadLogos(data);
         loadResume(data);
-        loadPortfolio(data);
+        loadPortfolio(data)
     })
 }
   
