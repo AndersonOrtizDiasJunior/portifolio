@@ -11,6 +11,7 @@ const category = document.querySelector('#category');
 const dateLabel = document.querySelector('#dateLabel');
 const dateValue = document.querySelector('#dateValue');
 const images = document.querySelector('#images')
+const profile = document.querySelector('#profile')
 
 
   function loadLogos(data) {
@@ -27,6 +28,7 @@ const images = document.querySelector('#images')
     const response = fetch('assets/data/db.json')
     .then(response => response.json())
     .then(data => {
+      profile.src = data.about.image;
       const details = loadDetails(data)
       setVisitedProject(details.id)
       updateDetails(details)
