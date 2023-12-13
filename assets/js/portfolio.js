@@ -12,9 +12,9 @@ const gameFilter = document.getElementById('gameFilter');
 const appFilter = document.getElementById('appFilter');
 
 
-allFilter.addEventListener('click', function() {
-  filter('all');
-});
+// allFilter.addEventListener('click', function() {
+//   filter('all');
+// });
 
 gameFilter.addEventListener('click', function() {
   filter('game');
@@ -32,7 +32,7 @@ function filter(filter) {
         if (projectsPortfolio.contains(mobile)) {
           projectsPortfolio.removeChild(mobile);
         }
-        allBtn.className = "";
+        // allBtn.className = "";
         mobileBtn.className = "";
         gamesBtn.className = "filter-active";
         projectsPortfolio.appendChild(games);
@@ -41,7 +41,7 @@ function filter(filter) {
         if (projectsPortfolio.contains(games)) {
           projectsPortfolio.removeChild(games);
         }
-        allBtn.className = "";
+        // allBtn.className = "";
         gamesBtn.className = "";
         mobileBtn.className = "filter-active";
         projectsPortfolio.appendChild(mobile);
@@ -55,7 +55,7 @@ function filter(filter) {
         }
         mobileBtn.className = "";
         gamesBtn.className = "";
-        allBtn.className = "filter-active";
+        // allBtn.className = "filter-active";
         projectsPortfolio.appendChild(games);
         projectsPortfolio.appendChild(mobile);
           break;
