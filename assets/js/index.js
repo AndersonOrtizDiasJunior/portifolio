@@ -1,4 +1,5 @@
 import {loadPortfolio} from "./portfolio.js";
+const stack = new URLSearchParams(window.location.search).get('stack') ?? "ios"
 const skills = document.querySelector("#skillsContainer");
 
 const city = document.querySelector("#location");
@@ -31,13 +32,14 @@ function splitArray(arr, x) {
     return subarrays;
 }
 
-async function fetchData() {
-    const response = await fetch('assets/data/db.json');
+async function fetchLogos() {
+    const response = await fetch(`https://andersonportfolio.onrender.com/technologies/${stack}`);
     return await response.json();
 }
 
-function loadLogos(data) {
-        const logos = data.technologies.find((logosFile) => logosFile.id == "index").logos;
+function loadLogos() {
+  fetchLogos().then((data) => {
+        const logos = data.logos;
         const logoRows = splitArray(logos, Math.ceil(logos.length / 6));
 
         logoRows.forEach((logoRow) => {
@@ -56,72 +58,32 @@ function loadLogos(data) {
 
             skills.appendChild(row);
         })
+      })
+
 }
 
-function loadResume(data) {
-  const educationData = data.resume.education
-  const experienceData = data.resume.experience
-
-  educationData.forEach((degree) => {
-    if(degree.visible) {    
-    const block = document.createElement('div');
-    block.className = "resume-item";
-    block.innerHTML = `<h4>${degree.name}</h4>
-    <h5>${degree.date}</h5>
-    <p><em>${degree.instituition}</em></p>
-    <p>${degree.description}</p>`;
-    education.appendChild(block)}
-  })
-
-  experienceData.forEach((job) => {
-    if(job.visible) {    
-    const block = document.createElement('div');
-    block.className = "resume-item";
-
-    var bullets = ""
-    job.bullets.forEach((bullet) => {
-      bullets = bullets.concat(`<li>${bullet}</li>`);
-    })
-    console.log(bullets);
-
-    block.innerHTML = `<h4>${job.name}</h4>
-    <h5>${job.date}</h5>
-    <p><em>${job.instituition}</em></p>
-    <ul>
-      ${bullets}
-    </ul>`;
-    experience.appendChild(block)}
-  })
+async function fetchPersonal() {
+  const response = await fetch(`https://andersonportfolio.onrender.com/about`);
+  return await response.json();
 }
 
-function loadPersonalInfo(data) {
-  const about = data.about;
-
-  profile.forEach((picture) => {
+function loadPersonalInfo() {
+  fetchPersonal().then((abouts) => {
+    const about = abouts[0]
+    profile.forEach((picture) => {
     picture.src = about.image;
   }) 
-  headline.textContent = about.headline;
-  birthday.textContent = `${new Date().getFullYear() - 2000}`;
-  jobTitle.textContent = about.jobTitle;
-  aboutCity.textContent = about.city;
-  aboutPhone.textContent = about.phone;
-  aboutEmail.textContent = about.email;
-  aboutDescription.textContent = about.description;
-
   city.textContent = about.city;
   email.textContent = about.email;
   phone.textContent = about.phone;
   whatsapp.innerHTML = `<a href="https://api.whatsapp.com/send?phone=%2B${about.whatsapp.number}">${about.whatsapp.label}</a>`;
+})
 }
 
 function loadPage() {
-    fetchData().then((data) => { 
-        loadPersonalInfo(data)
-        loadLogos(data);
-        loadResume(data);
-        loadPortfolio(data)
-    })
+        loadLogos();
+        loadPersonalInfo();
+        loadPortfolio(stack);
 }
   
 loadPage();
-console.log(window.innerWidth);

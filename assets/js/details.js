@@ -14,26 +14,34 @@ const images = document.querySelector('#images')
 const profile = document.querySelector('#profile')
 
 
-  function loadLogos(data) {
-    const logos = data.technologies.find((logos) => logos.id == id)
-    return logos
+async function fetchLogos(projectId) {
+  const response = await fetch(`https://andersonportfolio.onrender.com/technologies/${projectId}`);
+  return await response.json();
 }
 
-  function loadDetails(data) {
-    const details = data.projects.find((project) => project.id == id)
-    return details
-  }
+async function fetchProject() {
+  const response = await fetch(`https://andersonportfolio.onrender.com/projects/${id}`);
+  return await response.json();
+}
+
+async function fetchPersonal() {
+  const response = await fetch(`https://andersonportfolio.onrender.com/about`);
+  let abouts = await response.json()
+  return abouts[0];
+}
 
   function loadData() {
-    const response = fetch('assets/data/db.json')
-    .then(response => response.json())
-    .then(data => {
-      profile.src = data.about.image;
-      const details = loadDetails(data)
+    fetchProject().then((details) => {
       setVisitedProject(details.id)
       updateDetails(details)
-      const logos = loadLogos(data)
-      updateLogos(logos.logos)
+
+      fetchLogos(details.id).then((logos) => {
+        updateLogos(logos.logos)
+      })
+    })
+
+    fetchPersonal().then((about) => {
+      profile.src = about.image;
     })
   }
 

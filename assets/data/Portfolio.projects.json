@@ -1,0 +1,324 @@
+[{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb2829"
+  },
+  "id": "gamingPH",
+  "name": "Gaming Powerhouse",
+  "subtitle": null,
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/phThumb.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/ph1.png",
+    "assets/img/portfolio/ph2.png",
+    "assets/img/portfolio/ph3.png",
+    "assets/img/portfolio/ph4.png",
+    "assets/img/portfolio/ph5.png"
+  ],
+  "description": "The Gaming Powerhouse is an innovation division inside CI&T focused on producing games and gamified experiences for a variety of clients.",
+  "skills": [
+    "Implemented Software Functionalities in Unreal",
+    "Helped Define Coding Patterns and best practices for Blueprints",
+    "Developed simple low poly models on Blender",
+    "Solved Problems with Plugin imports",
+    "Created Cutscenes With Level Sequencer",
+    "Helped imagine and implement gameplay concepts",
+    "Adjusted Level Design and UI"
+  ],
+  "type": "Professional Project",
+  "category": "Games and Gamified Experiences",
+  "date": {
+    "title": "On Project Since",
+    "value": "February, 2023"
+  },
+  "access": null,
+  "sourceCode": null
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282a"
+  },
+  "id": "flow",
+  "name": "CI&T Flow Assistant",
+  "subtitle": null,
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/flowThumb.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/flow1.png",
+    "assets/img/portfolio/flow2.png",
+    "assets/img/portfolio/flow3.jpeg"
+  ],
+  "description": "This proof of concept (PoC) was created to demonstrate the potential of CI&T's generative AI solution, Flow. It involves integrating a Metahuman NPC with generative AI to create an NPC that can engage in conversation using voice recognition. The PoC was showcased at an event on December 1st, 2023.",
+  "skills": [
+    "Implemented and configured Enhanced Inputs",
+    "Auxiliated on the API integration process",
+    "Create a component to handle the audio recording",
+    "Created Scenes, Widgets and UI"
+  ],
+  "type": "Professional Project",
+  "category": "Games and Gamified Experiences",
+  "date": {
+    "title": "Project Date",
+    "value": "October - November, 2023"
+  },
+  "access": null,
+  "sourceCode": null
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282b"
+  },
+  "id": "shadowDeception",
+  "name": "Shadows of Deception",
+  "subtitle": null,
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/sod0.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/sod1.png",
+    "assets/img/portfolio/sod2.png",
+    "assets/img/portfolio/sod3.png"
+  ],
+  "description": "Shadows of Deception is a small uncompleted game made with Unreal Engine 5.2 for a game Jam. The game is a 3d adventure (of the subgenre walking simulator).",
+  "skills": [
+    "Strong abilities with Unreal Engine 5",
+    "Implement mechanics using Blueprints",
+    "Turn concepts into gemaplay"
+  ],
+  "type": "Personal Project",
+  "category": "Video Game",
+  "date": {
+    "title": "On Project Since",
+    "value": "October, 2023"
+  },
+  "access": {
+    "label": "Download and play",
+    "sourceName": "Itch.io",
+    "url": "https://d0ip.itch.io/shadowsofdeception"
+  },
+  "sourceCode": null
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282c"
+  },
+  "id": "bananaRun",
+  "name": "Banana Run Remake",
+  "subtitle": null,
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/BananaManRemake.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/BananaRunRemake2.png",
+    "assets/img/portfolio/BananaRunRemake3.png",
+    "assets/img/portfolio/BananaManRemake4.png",
+    "assets/img/portfolio/BananaManRemake5.png"
+  ],
+  "description": "Back when I was 15, I made a game called 'Banana Run' using Delphi. That was my first game ever, and it ocuppies a place in my heart. That's why I decided to remake it from scratch in Unity.\n\nObjectives:",
+  "skills": [
+    "Demonstrate programming skills in C#",
+    "Show knowledge of the Unity game Engine",
+    "Highlight clean code skills",
+    "Prove ability to transform a concept into gameplay"
+  ],
+  "type": "Personal Project",
+  "category": "Game",
+  "date": {
+    "title": "Project date",
+    "value": "March, 2022"
+  },
+  "access": {
+    "label": "Play",
+    "sourceName": "Simmer",
+    "url": "https://simmer.io/@AndersonOrtiz/banana-run-remake"
+  },
+  "sourceCode": {
+    "hostName": "GitHub",
+    "url": "https://github.com/AndersonOrtizDiasJunior/BananaRunRemake"
+  }
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282d"
+  },
+  "id": "premiere",
+  "name": "Premiere",
+  "subtitle": "The best of Soccer",
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/premiere1.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/premiere2.png",
+    "assets/img/portfolio/premiere3.webp"
+  ],
+  "description": "Premiere is a Brazilian pay-TV channel that uses the Pay-Per-View format to show the matches of the Campeonato Brasileiro Série A and B, Copa do Brasil and some State Championships for which Globo has the rights to broadcast. The app is developed natively with Swift, using the UIKit and SwiftUI frameworks.",
+  "skills": [
+    "Clean architeture",
+    "PromiseKit",
+    "iOS and AppleTV",
+    "Acessibility",
+    "Scrum"
+  ],
+  "type": "Professional Project",
+  "category": "App",
+  "date": {
+    "title": "Time on the project",
+    "value": "May, 2023 - Present"
+  },
+  "access": {
+    "label": "Download",
+    "sourceName": "App Store",
+    "url": "https://apps.apple.com/br/app/premiere/id468481865"
+  },
+  "sourceCode": null
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282e"
+  },
+  "id": "g1",
+  "name": "G1",
+  "subtitle": "The Globo news portal",
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/g1.png",
+  "portfolio": true,
+  "images": [
+    "assets/img/portfolio/g1-2.png",
+    "assets/img/portfolio/g1-3.PNG"
+  ],
+  "description": "G1 is the top #1 news app in Brazil (being both the most used and the most known). The app is developed natively with Swift, using both the UIKit and SwiftUI frameworks.",
+  "skills": [
+    "Auxiliated in the most crucial moment of the app, the Brazilian Presidential Elections",
+    "Developed new features (the images contains the screenshot of two of the diverse in production features I developed)",
+    "Fixed bugs and improved user experience",
+    "Auxiliated in archtetural refactors",
+    "Created requisitions",
+    "Implemented Unit tests"
+  ],
+  "type": "Professional Project",
+  "category": "App",
+  "date": {
+    "title": "Time on the project",
+    "value": "February, 2022 - May, 2023"
+  },
+  "access": {
+    "label": "Download",
+    "sourceName": "App Store",
+    "url": "https://apps.apple.com/br/app/g1-portal-de-not%C3%ADcias-da-globo/id413333281"
+  },
+  "sourceCode": null
+},
+{
+  "_id": {
+    "$oid": "65af96156fe4eea8ebbb282f"
+  },
+  "id": "rpgpt",
+  "name": "RPGPT",
+  "images": [
+    "assets/img/portfolio/rpgpt2.png",
+    "assets/img/portfolio/rpgpt3.png",
+    "assets/img/portfolio/rpgpt4.png"
+  ],
+  "subtitle": null,
+  "filter": {
+    "$cond": [
+      {
+        "$eq": [
+          "$filter",
+          "game"
+        ]
+      },
+      "gamedev",
+      "ios"
+    ]
+  },
+  "thumb": "assets/img/portfolio/rpgpt1.png",
+  "portfolio": true,
+  "description": "This project is a chat app where you can play tabletop RPG with ChatGPT.\n\nProject objectives:",
+  "skills": [
+    "Demonstrate applied understanding of MVVM architecture",
+    "Display applied knowledge of the SwiftUI framework",
+    "Exemplify applied knowledge of the Combine framework",
+    "Illustrate skills to integrate third-party libs using Swift Package Manager",
+    "Show Clean Code and best industry practices",
+    "Prove deep understanding of Swift programming language"
+  ],
+  "type": "Personal Project",
+  "category": "App",
+  "date": {
+    "title": "Project date",
+    "value": "May, 2023"
+  },
+  "access": null,
+  "sourceCode": {
+    "hostName": "GitHub",
+    "url": "https://github.com/AndersonOrtizDiasJunior/RPGPT"
+  }
+}]

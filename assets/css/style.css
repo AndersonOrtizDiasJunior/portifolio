@@ -23,6 +23,7 @@ a:hover {
   color: #37b3ed;
   text-decoration: none;
 }
+
 .countryFlag {
   font-size: 1.5em;
 }
@@ -593,19 +594,19 @@ section {
   transition: all ease-in-out 0.3s;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
 .portfolio-wrap .portfolio-links {
   height: 100%;
 }
 
-.visited .portfolio-links{
-  background:  rgba(20, 157, 221, 0.75);
+.visited .portfolio-links {
+  background: rgba(91, 5, 107, 0.873);
 }
 
-.unVisited .portfolio-links{
-  background: rgba(0, 72, 114, 0.75);
+.unVisited .portfolio-links {
+  background: rgba(20, 157, 221, 0.75);
 }
 
 .visited img {
@@ -618,7 +619,7 @@ section {
   text-align: center;
   transition: 0.3s;
   width: 100%;
-  
+
 }
 
 .portfolio .portfolio-wrap .portfolio-links a+a {
@@ -1080,7 +1081,7 @@ section {
     display: inline-block;
   }
 
-  #hero { 
+  #hero {
     background: url("../img/hero-mobile-bg.png") top left;
   }
 }
@@ -1088,7 +1089,7 @@ section {
 @media (max-width: 600px) {
   #skillsContainer {
     display: flex;
-   }
+  }
 }
 
 /*--------------------------------------------------------------
