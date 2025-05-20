@@ -1,5 +1,6 @@
 import {getLocalStorage} from "./utils.js"
 const projectsPortfolio = document.querySelector("#projectsContainer");
+const loading = document.querySelector("#portfolio-loading");
 const containerPortfolio = document.querySelector("#portfolio");
 var projectDiv = null;
 const gamesBtn = document.querySelector('#gameFilter');
@@ -30,6 +31,7 @@ const appFilter = document.getElementById('appFilter');
 }
 
   export function loadPortfolio(stack) {
+    loading.style.display = 'none';
     fetchProjects(stack).then((projects) => {
     projectDiv = document.createElement('div');
     projectDiv.setAttribute("class", "row portfolio-container");

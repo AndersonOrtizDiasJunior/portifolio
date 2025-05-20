@@ -1,5 +1,5 @@
 import {loadPortfolio} from "./portfolio.js";
-const stack = new URLSearchParams(window.location.search).get('stack') ?? "ios"
+const stack = new URLSearchParams(window.location.search).get('stack') ?? "gamedev"
 const skills = document.querySelector("#skillsContainer");
 
 const city = document.querySelector("#location");
