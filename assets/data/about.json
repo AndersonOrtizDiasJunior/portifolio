@@ -1,1 +1,12 @@
-[{"_id":"65af90366fe4eea8ebbb27f0","headline":"Game designer and iOS developer with a passion for learning and improvement.","jobTitle":"Unreal Engine & iOS Developer.","city":"Piracicaba, Brazil","phone":"+55 (19) 98927 3702","email":"anderson@rtizdeveloper.com.br","description":"Brazilian junior developer with professional experience, eternally in love with my family, learning, and coding.","image":"https://i.imgur.com/j8QTmkQ.jpeg","whatsapp":{"label":"+55 (19)98927-3702","number":"5519989273702"}}]
+[
+    {"_id":"65af90366fe4eea8ebbb27f0",
+    "headline":"Game designer and iOS developer with a passion for learning and improvement.",
+    "jobTitle":"Unreal Engine & iOS Developer."
+    ,"city":"São João da Boa Vista, Brazil",
+    "phone":"+55 (19) 98927 3702",
+    "email":"anderson@rtizdeveloper.com.br",
+    "description":"Brazilian junior developer with professional experience, eternally in love with my family, learning, and coding.",
+    "image":"https://i.imgur.com/j8QTmkQ.jpeg",
+    "whatsapp":{"label":"+55 (19)98927-3702", "number":"5519989273702"}
+    }
+]
