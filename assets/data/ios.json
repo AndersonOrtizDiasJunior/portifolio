@@ -1,0 +1,10 @@
+{
+    "logos":
+[
+    {"label":"Swift","icon":"cib:swift"},
+    {"label":"iOS Development","icon":"raphael:ios"},
+    {"label":"tvOS Development","icon":"simple-icons:appletv"},
+    {"label":"Agile Frameworks","icon":"iconoir:agile"},
+    {"label":"Git","icon":"bi:git"}
+]
+}

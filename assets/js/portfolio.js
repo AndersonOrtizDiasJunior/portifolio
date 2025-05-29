@@ -31,8 +31,8 @@ const appFilter = document.getElementById('appFilter');
 }
 
   export function loadPortfolio(stack) {
-    loading.style.display = 'none';
     fetchProjects(stack).then((projects) => {
+    loading.style.display = 'none';
     projectDiv = document.createElement('div');
     projectDiv.setAttribute("class", "row portfolio-container");
     projectDiv.setAttribute("data-aos", "fade-up");

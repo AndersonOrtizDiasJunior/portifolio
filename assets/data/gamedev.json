@@ -1,0 +1,9 @@
+{
+    "logos":[
+        {"label":"Unreal Engine","icon":"fontisto:unreal-engine"},
+        {"label":"Blueprints Visual Scripting","icon":"material-symbols:layers"},
+        {"label":"C++","icon":"gg:c-plus-plus"},{"label":"Blender","icon":"simple-icons:blender"},
+        {"label":"Unity","icon":"mdi:unity"},{"label":"C#","icon":"teenyicons:c-sharp-solid"},
+        {"label":"Git","icon":"bi:git"},{"label":"Apache Subversion","icon":"simple-icons:subversion"},
+        {"label":"Agile Frameworks","icon":"iconoir:agile"}],"project":"gamedev"
+}

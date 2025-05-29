@@ -33,7 +33,8 @@ function splitArray(arr, x) {
 }
 
 async function fetchLogos() {
-    const response = await fetch(`https://andersonportfolio.onrender.com/technologies/${stack}`);
+    const response = await fetch(`assets/data/${stack}.json`);
+
     return await response.json();
 }
 
@@ -63,7 +64,7 @@ function loadLogos() {
 }
 
 async function fetchPersonal() {
-  const response = await fetch(`https://andersonportfolio.onrender.com/about`);
+  const response = await fetch(`assets/data/about.json`);
   return await response.json();
 }
 
