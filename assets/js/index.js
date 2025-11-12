@@ -64,7 +64,7 @@ function loadLogos() {
 }
 
 async function fetchPersonal() {
-  const response = await fetch(`assets/data/about.json`);
+  const response = await fetch("https://andersonportfolio.onrender.com/about");
   return await response.json();
 }
 
