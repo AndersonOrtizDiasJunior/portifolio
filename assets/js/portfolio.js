@@ -26,8 +26,9 @@ const appFilter = document.getElementById('appFilter');
   }
 
   async function fetchProjects(stack) {
-    const response = await fetch(`https://andersonportfolio.onrender.com/projects/filter/${stack}`);
-    return await response.json();
+    const response = await fetch(`assets/data/projects.json`);
+    const projects = await response.json();
+    return projects.filter((project) => project.filter === stack);
 }
 
   export function loadPortfolio(stack) {

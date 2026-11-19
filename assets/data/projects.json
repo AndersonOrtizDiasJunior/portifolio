@@ -1,0 +1,309 @@
+[
+  {
+    "_id": "fortnite",
+    "id": "fortnite",
+    "name": "Fortnite",
+    "subtitle": "Tech UI Designer",
+    "filter": "gamedev",
+    "thumb": "assets/img/portfolio/fortniteThumb.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/fortnite-1.png",
+      "https://youtu.be/l_T0lduTcKo"
+    ],
+    "description": "As a Tech UI Designer on Fortnite, I work at the intersection of art, design, and engineering, turning UI concepts into polished, performant screens inside Unreal Engine.\nI create new UI materials directly in the editor, and build, implement, and improve widgets using Common UI, ViewModels, and Blueprints. Working closely with art and UX teams, I help bring new screens and features from mockup to in-game experience, making sure they look right, feel responsive, and are easy for other developers to maintain. I also collaborate with engineering teams to make sure my screens deliver great performance.\n\nResponsibilities:",
+    "skills": [
+      "Create new UI materials and shader effects in the Unreal Editor",
+      "Build, implement, and improve widgets using Common UI",
+      "Connect UI to game data using the ViewModel (MVVM) pattern",
+      "Script UI behavior and interactions with Blueprints",
+      "Partner with art and UX teams to create new screens from concept to implementation",
+      "Work together with engineering teams to optimize and refactor UI for performance and maintainability",
+      "Manage assets and changes with Perforce Helix Core",
+      "Use AI tools to speed up development workflows"
+    ],
+    "type": "Professional Project",
+    "category": "Game UI",
+    "date": {
+      "title": "On Project Since",
+      "value": "2026"
+    },
+    "access": null,
+    "sourceCode": null
+  },
+  {
+    "_id": "69139fc7b71650edc6ff7690",
+    "id": "saveSystem",
+    "name": "Save System Structure with Thumbnails",
+    "subtitle": null,
+    "filter": "gamedev",
+    "thumb": "https://i.postimg.cc/MT5tQyg0/save-Thumb.png",
+    "portfolio": true,
+    "images": [
+      "https://media.fab.com/image_previews/gallery_images/0da492de-6fdf-4dca-a294-4406e881cea1/ba8d3a12-9f8b-4d07-ac5b-918eb20451d2.jpg",
+      "https://media.fab.com/image_previews/gallery_images/c28e4be1-89ee-4a2e-a876-fa274540bdbb/a2e95d78-4cf6-477e-ab76-d2fe97e9045e.jpg",
+      "https://media.fab.com/image_previews/gallery_images/b173abd3-8b7e-4d93-acd9-87de46484735/c3a86475-9f60-4ec4-8c33-32b2fd942b47.jpg",
+      "https://media.fab.com/image_previews/gallery_images/7155f80f-5469-439d-aa97-e2ce5b8ae227/7dbd4226-9f35-499e-a0c3-ab4e6243ddad.jpg",
+      "https://media.fab.com/image_previews/gallery_images/76d6a8c8-d124-4a4f-9580-fb29046231ae/c9bf8425-12e1-4c9c-ba1a-9cae6929f591.jpg",
+      "https://www.youtube.com/watch?v=oXNIaffI5IQ"
+    ],
+    "description": "This plugin is a save system framework I developed using C++, Blueprints, and Common UI.\nThe plugin that uses C++ to generate runtime thumbnails asynchronously. It introduces an async node that waits for the render pipeline to finish, exports the render target to a file, and returns the file path.\nWith this system in place, I was able to build a foundation for a save system that makes it much easier for other developers to implement their own saving mechanisms with minimal setup.\n\nObjectives:",
+    "skills": [
+      "Demonstrate programming skills in C++",
+      "Show knowledge of the Unreal game Engine",
+      "Highlight problem solving with C++ skills",
+      "Demonstrate habillity to work with Common UI",
+      "Contribute to Indie Dev Community"
+    ],
+    "type": "Published Plugin",
+    "category": "Game",
+    "date": {
+      "title": "Project date",
+      "value": "November, 2025"
+    },
+    "access": {
+      "label": "Download",
+      "sourceName": "Fab",
+      "url": "https://www.fab.com/listings/150c7b48-a3bf-4a40-a8aa-d69061afefa0"
+    },
+    "sourceCode": {
+      "hostName": "GitHub",
+      "url": "https://github.com/AndersonOrtizDiasJunior/SaveSystem"
+    }
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282c",
+    "id": "bananaRun",
+    "name": "Banana Run Remake",
+    "subtitle": null,
+    "filter": "gamedev",
+    "thumb": "assets/img/portfolio/BananaManRemake.png",
+    "portfolio": false,
+    "images": [
+      "assets/img/portfolio/BananaRunRemake2.png",
+      "assets/img/portfolio/BananaRunRemake3.png",
+      "assets/img/portfolio/BananaManRemake4.png",
+      "assets/img/portfolio/BananaManRemake5.png"
+    ],
+    "description": "Back when I was 15, I made a game called 'Banana Run' using Delphi. That was my first game ever, and it ocuppies a place in my heart. That's why I decided to remake it from scratch in Unity.\n\nObjectives:",
+    "skills": [
+      "Demonstrate programming skills in C#",
+      "Show knowledge of the Unity game Engine",
+      "Highlight clean code skills",
+      "Prove ability to transform a concept into gameplay"
+    ],
+    "type": "Personal Project",
+    "category": "Game",
+    "date": {
+      "title": "Project date",
+      "value": "March, 2022"
+    },
+    "access": {
+      "label": "Play",
+      "sourceName": "Simmer",
+      "url": "https://simmer.io/@AndersonOrtiz/banana-run-remake"
+    },
+    "sourceCode": {
+      "hostName": "GitHub",
+      "url": "https://github.com/AndersonOrtizDiasJunior/BananaRunRemake"
+    }
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282a",
+    "id": "flow",
+    "name": "CI&T Flow Assistant",
+    "subtitle": null,
+    "filter": "gamedev",
+    "thumb": "assets/img/portfolio/flowThumb.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/flow1.png",
+      "assets/img/portfolio/flow2.png",
+      "assets/img/portfolio/flow3.jpeg"
+    ],
+    "description": "This proof of concept (PoC) was created to demonstrate the potential of CI&T's generative AI solution, Flow. It involves integrating a Metahuman NPC with generative AI to create an NPC that can engage in conversation using voice recognition. The PoC was showcased at an event on December 1st, 2023.",
+    "skills": [
+      "Implemented and configured Enhanced Inputs",
+      "Auxiliated on the API integration process",
+      "Create a component to handle the audio recording",
+      "Created Scenes, Widgets and UI"
+    ],
+    "type": "Professional Project",
+    "category": "Games and Gamified Experiences",
+    "date": {
+      "title": "Project Date",
+      "value": "October - November, 2023"
+    },
+    "access": null,
+    "sourceCode": null
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282b",
+    "id": "shadowDeception",
+    "name": "Shadows of Deception",
+    "subtitle": null,
+    "filter": "gamedev",
+    "thumb": "assets/img/portfolio/sod0.png",
+    "portfolio": false,
+    "images": [
+      "assets/img/portfolio/sod1.png",
+      "assets/img/portfolio/sod2.png",
+      "assets/img/portfolio/sod3.png"
+    ],
+    "description": "Shadows of Deception is a small uncompleted game made with Unreal Engine 5.2 for a game Jam. The game is a 3d adventure (of the subgenre walking simulator).",
+    "skills": [
+      "Strong abilities with Unreal Engine 5",
+      "Implement mechanics using Blueprints",
+      "Turn concepts into gemaplay"
+    ],
+    "type": "Personal Project",
+    "category": "Video Game",
+    "date": {
+      "title": "On Project Since",
+      "value": "October, 2023"
+    },
+    "access": {
+      "label": "Download and play",
+      "sourceName": "Itch.io",
+      "url": "https://d0ip.itch.io/shadowsofdeception"
+    },
+    "sourceCode": null
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282e",
+    "id": "g1",
+    "name": "G1",
+    "subtitle": "The Globo news portal",
+    "filter": "ios",
+    "thumb": "assets/img/portfolio/g1.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/g1-2.png",
+      "assets/img/portfolio/g1-3.PNG"
+    ],
+    "description": "G1 is the top #1 news app in Brazil (being both the most used and the most known). The app is developed natively with Swift, using both the UIKit and SwiftUI frameworks.",
+    "skills": [
+      "Auxiliated in the most crucial moment of the app, the Brazilian Presidential Elections",
+      "Developed new features (the images contains the screenshot of two of the diverse in production features I developed)",
+      "Fixed bugs and improved user experience",
+      "Auxiliated in archtetural refactors",
+      "Created requisitions",
+      "Implemented Unit tests"
+    ],
+    "type": "Professional Project",
+    "category": "App",
+    "date": {
+      "title": "Time on the project",
+      "value": "February, 2022 - May, 2023"
+    },
+    "access": {
+      "label": "Download",
+      "sourceName": "App Store",
+      "url": "https://apps.apple.com/br/app/g1-portal-de-not%C3%ADcias-da-globo/id413333281"
+    },
+    "sourceCode": null
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb2829",
+    "id": "gamingPH",
+    "name": "Gaming Powerhouse",
+    "subtitle": null,
+    "filter": "gamedev",
+    "thumb": "assets/img/portfolio/phThumb.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/ph1.png",
+      "assets/img/portfolio/ph2.png",
+      "assets/img/portfolio/ph3.png",
+      "assets/img/portfolio/ph4.png",
+      "assets/img/portfolio/ph5.png"
+    ],
+    "description": "The Gaming Powerhouse is an innovation division inside CI&T focused on producing games and gamified experiences for a variety of clients.",
+    "skills": [
+      "Implemented Software Functionalities in Unreal",
+      "Helped Define Coding Patterns and best practices for Blueprints",
+      "Developed simple low poly models on Blender",
+      "Solved Problems with Plugin imports",
+      "Created Cutscenes With Level Sequencer",
+      "Helped imagine and implement gameplay concepts",
+      "Adjusted Level Design and UI"
+    ],
+    "type": "Professional Project",
+    "category": "Games and Gamified Experiences",
+    "date": {
+      "title": "On Project Since",
+      "value": "February, 2023"
+    },
+    "access": null,
+    "sourceCode": null
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282d",
+    "id": "premiere",
+    "name": "Premiere",
+    "subtitle": "The best of Soccer",
+    "filter": "ios",
+    "thumb": "assets/img/portfolio/premiere1.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/premiere2.png",
+      "assets/img/portfolio/premiere3.webp"
+    ],
+    "description": "Premiere is a Brazilian pay-TV channel that uses the Pay-Per-View format to show the matches of the Campeonato Brasileiro Série A and B, Copa do Brasil and some State Championships for which Globo has the rights to broadcast. The app is developed natively with Swift, using the UIKit and SwiftUI frameworks.",
+    "skills": [
+      "Clean architeture",
+      "PromiseKit",
+      "iOS and AppleTV",
+      "Acessibility",
+      "Scrum"
+    ],
+    "type": "Professional Project",
+    "category": "App",
+    "date": {
+      "title": "Time on the project",
+      "value": "May, 2023 - Present"
+    },
+    "access": {
+      "label": "Download",
+      "sourceName": "App Store",
+      "url": "https://apps.apple.com/br/app/premiere/id468481865"
+    },
+    "sourceCode": null
+  },
+  {
+    "_id": "65af96156fe4eea8ebbb282f",
+    "id": "rpgpt",
+    "name": "RPGPT",
+    "subtitle": null,
+    "filter": "ios",
+    "thumb": "assets/img/portfolio/rpgpt1.png",
+    "portfolio": true,
+    "images": [
+      "assets/img/portfolio/rpgpt2.png",
+      "assets/img/portfolio/rpgpt3.png",
+      "assets/img/portfolio/rpgpt4.png"
+    ],
+    "description": "RPGPT is a project that integrates ChatGPT with a Unity-based RPG game. It allows the player to interact dynamically with NPCs powered by AI, offering a personalized and innovative gaming experience.",
+    "skills": [
+      "Integrated OpenAI's API with Unity",
+      "Designed gameplay interactions for AI-driven NPC conversations",
+      "Implemented mechanics and UI for dialogue and choices",
+      "Developed custom scripts to manage AI requests and responses"
+    ],
+    "type": "Personal Project",
+    "category": "Video Game",
+    "date": {
+      "title": "Project Date",
+      "value": "June, 2023 - Present"
+    },
+    "access": {
+      "label": "Watch Demo",
+      "sourceName": "YouTube",
+      "url": "https://youtube.com/demo/rpgpt"
+    },
+    "sourceCode": {
+      "hostName": "GitHub",
+      "url": "https://github.com/AndersonOrtizDiasJunior/RPGPT"
+    }
+  }
+]

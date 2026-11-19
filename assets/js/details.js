@@ -15,17 +15,19 @@ const profile = document.querySelector('#profile')
 
 
 async function fetchLogos(projectId) {
-  const response = await fetch(`https://andersonportfolio.onrender.com/technologies/${projectId}`);
-  return await response.json();
+  const response = await fetch(`assets/data/technologies.json`);
+  const technologies = await response.json();
+  return technologies.find((tech) => tech.project === projectId);
 }
 
 async function fetchProject() {
-  const response = await fetch(`https://andersonportfolio.onrender.com/projects/${id}`);
-  return await response.json();
+  const response = await fetch(`assets/data/projects.json`);
+  const projects = await response.json();
+  return projects.find((project) => project._id === id);
 }
 
 async function fetchPersonal() {
-  const response = await fetch(`https://andersonportfolio.onrender.com/about`);
+  const response = await fetch(`assets/data/about.json`);
   let abouts = await response.json()
   return abouts[0];
 }
@@ -72,11 +74,12 @@ async function fetchPersonal() {
   var rawImageHtml = ""
   project.images.forEach(image => {
     rawImageHtml+= `<div class="swiper-slide">
-    <img src="${image}" alt="">
+    ${slideContent(image)}
   </div>
 `
   })
 images.innerHTML = rawImageHtml
+setupSlider()
 
 if (project.access !== null) {
   const download = document.createElement('li')
@@ -93,6 +96,48 @@ if (project.sourceCode !== null) {
 detail.appendChild(source)
 }
  
+// Builds a slide from an entry in "images": YouTube link, video file, or image
+function slideContent(src) {
+  const youtube = src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{11})/);
+  if (youtube) {
+    return `<div class="video-slide">
+      <iframe src="https://www.youtube.com/embed/${youtube[1]}?enablejsapi=1&rel=0" title="Project video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>`;
+  }
+  if (/\.(mp4|webm|ogg)$/i.test(src)) {
+    return `<video src="${src}" controls playsinline preload="metadata"></video>`;
+  }
+  return `<img src="${src}" alt="">`;
+}
+
+// Refreshes the carousel with the new slides and stops autoplay on video slides
+function setupSlider() {
+  const swiper = document.querySelector('.portfolio-details-slider')?.swiper;
+  if (!swiper) return;
+
+  swiper.loopDestroy();
+  swiper.loopCreate();
+  swiper.update();
+  swiper.slideToLoop(0, 0);
+
+  const updateAutoplay = () => {
+    document.querySelectorAll('#images video').forEach(video => video.pause());
+    document.querySelectorAll('#images iframe').forEach(frame =>
+      frame.contentWindow?.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'));
+
+    const active = swiper.slides[swiper.activeIndex];
+    if (active && active.querySelector('iframe, video')) {
+      swiper.autoplay.stop();
+    } else if (!swiper.autoplay.running) {
+      swiper.autoplay.start();
+    }
+  };
+  swiper.on('slideChange', updateAutoplay);
+  updateAutoplay();
+}
+
 function updateLogos(logos) {
   var rawIconHtml = ""
   logos.forEach(logo => {
